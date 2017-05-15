@@ -17,7 +17,7 @@ export class Todos {
  
   init(details){
  
-    this.db = new PouchDB('cloudo');
+    this.db = new PouchDB('nutrinurse');
  
     this.remote = details.userDBs.supertest;
  
@@ -45,6 +45,7 @@ export class Todos {
   getTodos() {
  
     if (this.data) {
+      
       return Promise.resolve(this.data);
     }
  
@@ -58,7 +59,7 @@ export class Todos {
  
         this.data = [];
  
-        let doc = result.rows.map((row) => {
+        let doc = result.rows.map((row) => {              
           this.data.push(row.doc);
         });
  

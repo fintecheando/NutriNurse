@@ -17,7 +17,8 @@ export class HomePage {
  
   }
  
-  ionViewLoaded(){
+  ionViewDidLoad(){
+    
     this.todoService.getTodos().then((data) => {
         this.todos = data;
     });
@@ -30,10 +31,10 @@ export class HomePage {
   }
  
   createTodo(){
- 
+    console.log("CREAR REGISTRO");
     let prompt = this.alertCtrl.create({
-      title: 'Add',
-      message: 'What do you need to do?',
+      title: 'Agregar',
+      message: 'Agregar Registro Paciente',
       inputs: [
         {
           name: 'title'
@@ -41,10 +42,10 @@ export class HomePage {
       ],
       buttons: [
         {
-          text: 'Cancel'
+          text: 'Cancelar'
         },
         {
-          text: 'Save',
+          text: 'Guardar',
           handler: data => {
             this.todoService.createTodo({title: data.title});
           }
@@ -57,10 +58,10 @@ export class HomePage {
   }
  
   updateTodo(todo){
- 
+    console.log("ACTUALIZAR REGISTRO");
     let prompt = this.alertCtrl.create({
-      title: 'Edit',
-      message: 'Change your mind?',
+      title: 'Editar',
+      message: 'Editar Registro Paciente',
       inputs: [
         {
           name: 'title'
@@ -68,10 +69,10 @@ export class HomePage {
       ],
       buttons: [
         {
-          text: 'Cancel'
+          text: 'Cancelar'
         },
         {
-          text: 'Save',
+          text: 'Guardar',
           handler: data => {
             this.todoService.updateTodo({
                 _id: todo._id,
@@ -87,6 +88,7 @@ export class HomePage {
   }
  
   deleteTodo(todo){
+    console.log("BORRAR REGISTRO");
     this.todoService.deleteTodo(todo);
   }
  
