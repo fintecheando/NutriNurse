@@ -47,7 +47,16 @@ export class HomePage {
         {
           name: 'apellidos',
           placeholder: 'Apellido(s)'
+        },
+        {
+          name: 'peso',
+          placeholder: 'Peso'
+        },
+        {
+          name: 'estatura',
+          placeholder: 'Estatura'
         }
+
       ],
       buttons: [
         {
@@ -56,7 +65,17 @@ export class HomePage {
         {
           text: 'Guardar',
           handler: data => {
-            this.todoService.createTodo({title: data.title});
+            console.log(data.peso/(data.estatura*data.estatura));
+            this.todoService.createTodo(
+              {
+                title: data.title,
+                nombres: data.nombres,
+                apellidos: data.apellidos,
+                peso: data.peso,
+                estatura: data.estatura,
+                imc: data.peso/(data.estatura*data.estatura)                
+              }
+            );
           }
         }
       ]
@@ -83,7 +102,20 @@ export class HomePage {
         {
           name: 'apellidos',
           placeholder: todo.apellidos
+        },
+        {
+          name: 'peso',
+          placeholder: todo.peso
+        },
+        {
+          name: 'estatura',
+          placeholder: todo.estatura
+        },
+        {
+          name: 'imc',
+          placeholder: todo.imc
         }
+
       ],
       buttons: [
         {
@@ -97,8 +129,10 @@ export class HomePage {
                 _rev: todo._rev,
                 title: data.title,
                 nombres: data.nombres,
-                apellidos: data.apellidos
-
+                apellidos: data.apellidos,
+                peso: data.peso,
+                estatura: data.estatura,
+                imc: data.peso/(data.estatura*data.estatura)
             });
           }
         }
