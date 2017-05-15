@@ -3,7 +3,28 @@ Super Nurse
 
 Para poder trabajar offline con el calculo de los datos de Nutricion de la poblacion que las Nutriologas y/o Enfermeras. Si tienen linea que mejor, pero si no, pueden trabajar.
 
+Referencia:
+
+Para Instalar CouchDB en Ubuntu 14.04
+https://www.digitalocean.com/community/tutorials/how-to-install-couchdb-and-futon-on-ubuntu-14-04
+
+
+Ionic - Base App
+https://www.joshmorony.com/part-2-creating-a-multiple-user-app-with-ionic-2-pouchdb-couchdb/
+https://github.com/atbraoy/ionic2-apache-couchDB
+
+Para upgrade a Ionic 3:
+https://forum.ionicframework.com/t/guide-how-to-update-to-ionic-3-x/87516
+
+Para login a la BD couchDB x Futon:
+
+http://localhost:5984/_utils
+User: kernel182
+Pwd: Gusana02
+
 La app de NutriNurse la armo usando:
+
+Node 7.1
 
 Ionic 3
 
