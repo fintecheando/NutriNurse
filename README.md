@@ -1,5 +1,5 @@
-# SuperNurse
-Super Nurse
+# NutriNurse
+NutriNurse
 
 Para poder trabajar offline con el calculo de los datos de Nutricion de la poblacion que las Nutriologas y/o Enfermeras. Si tienen linea que mejor, pero si no, pueden trabajar.
 
