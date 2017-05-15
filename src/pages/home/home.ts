@@ -37,7 +37,16 @@ export class HomePage {
       message: 'Agregar Registro Paciente',
       inputs: [
         {
-          name: 'title'
+          name: 'title',
+          placeholder: 'CURP'
+        },
+        {
+          name: 'nombres',
+          placeholder: 'Nombre(s)'
+        },
+        {
+          name: 'apellidos',
+          placeholder: 'Apellido(s)'
         }
       ],
       buttons: [
@@ -64,7 +73,16 @@ export class HomePage {
       message: 'Editar Registro Paciente',
       inputs: [
         {
-          name: 'title'
+          name: 'title',
+          placeholder: todo.title
+        },
+        {
+          name: 'nombres',
+          placeholder: todo.nombres
+        },
+        {
+          name: 'apellidos',
+          placeholder: todo.apellidos
         }
       ],
       buttons: [
@@ -77,7 +95,10 @@ export class HomePage {
             this.todoService.updateTodo({
                 _id: todo._id,
                 _rev: todo._rev,
-                title: data.title
+                title: data.title,
+                nombres: data.nombres,
+                apellidos: data.apellidos
+
             });
           }
         }
