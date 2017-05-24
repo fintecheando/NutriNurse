@@ -34,7 +34,7 @@ export class SignupPage {
             confirmPassword: this.confirmPassword
         };
  
-        this.http.post('http://localhost:3000/auth/register', JSON.stringify(user), {headers: headers})
+        this.http.post('http://lozcar.bitnamiapp.com:3000/auth/register', JSON.stringify(user), {headers: headers})
           .subscribe(res => {
             this.todoService.init(res.json());
             this.nav.setRoot(HomePage);

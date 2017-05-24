@@ -33,7 +33,7 @@ export class LoginPage {
             password: this.password
         };
  
-        this.http.post('http://localhost:3000/auth/login', JSON.stringify(credentials), {headers: headers})
+        this.http.post('http://lozcar.bitnamiapp.com:3000/auth/login', JSON.stringify(credentials), {headers: headers})
           .subscribe(res => {
             this.todoService.init(res.json());
             this.nav.setRoot(HomePage);

@@ -18,16 +18,20 @@ app.use(function(req, res, next) {
    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
    next();
 });
- 
+
+
+
 var config = {
   dbServer: {
     protocol: 'http://',
     host: 'localhost:5984',
     user: 'kernel182',
     password: 'Gusana02',
+    publicURL: 'http://lozcar.bitnamiapp.com:5984',
     userDB: 'kernel182',
     couchAuthDB: '_users'
   },
+
   mailer: {
     fromEmail: 'gmail.user@gmail.com',
     options: {
